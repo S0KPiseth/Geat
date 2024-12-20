@@ -3,6 +3,7 @@ function Card(prop) {
   let imgUrl = null;
   let kamenriderName = null;
   let kmDescription = null;
+  const cardClick = (cardname) => alert(cardname);
   switch (prop.name) {
     case "ace":
       imgUrl = "https://m.media-amazon.com/images/M/MV5BYzk3M2I1MGEtMDU2Ni00NDNjLWI2ZTEtMjM4NzNkNjQ3NmIwXkEyXkFqcGc@._V1_.jpg";
@@ -32,7 +33,7 @@ function Card(prop) {
   }
 
   return (
-    <div className={style.card}>
+    <div className={style.card} onClick={() => cardClick(kamenriderName)}>
       <img height="150px" src={imgUrl} alt="" />
       <p className={style.name}>{kamenriderName}</p>
       <br />

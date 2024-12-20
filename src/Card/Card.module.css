@@ -10,8 +10,11 @@
   width: 300px;
   box-shadow: 0 0 2px hsla(26, 7%, 43%, 0.522);
   height: 350px;
-  background: rgb(0, 0, 0);
   background: linear-gradient(162deg, rgba(0, 0, 0, 1) 40%, rgba(255, 255, 255, 1) 40.3%);
+}
+.card:hover {
+  animation: scale-hover 0.1s;
+  scale: 1.4;
 }
 .card > img {
   clip-path: circle();
@@ -26,4 +29,15 @@
   font-size: 1rem;
   color: black;
   font-weight: bold;
+}
+@keyframes scale-hover {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.2;
+  }
+  to {
+    scale: 1.4;
+  }
 }
